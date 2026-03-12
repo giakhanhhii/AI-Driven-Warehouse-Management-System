@@ -1,103 +1,109 @@
+# 📦 AI-Driven Warehouse Management System
 
-# Warehouse Management ChatBot Project
+<p align="center">
+  <img src="https://img.shields.io/badge/Author-Nguyen%20Trieu%20Gia%20Khanh-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/University-Thuongmai%20University-maroon?style=for-the-badge" />
+</p>
 
-This project is designed to assist with warehouse management through a ChatBot application. It leverages support from OpenAI and Amazon LLM models to respond to various user queries related to warehouse management.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/LangChain-121011?style=for-the-badge&logo=chainlink&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Pinecone-000000?style=for-the-badge&logo=pinecone&logoColor=white" />
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white" />
+</p>
 
-## Features
+---
 
-- **LLM Models:** Supports both OpenAI and Amazon LLM models.
-- **Database:** Utilizes PostgreSQL for relational database management.
-- **Embeddings:** Pinecone is used for embedding operations.
-- **Langchain Agents and Tools:** Creates an agent to query both relational and unstructured datasets based on user queries.
-- **Frontend:** A Streamlit application provides the user interface.
-- **History Mechanism:** Keeps track of user interactions and query history.
+## 🌟 Project Overview
 
-## Installation
+This project is an **Intelligent Warehouse Management System** developed by **Nguyen Trieu Gia Khanh**. It integrates advanced AI capabilities to optimize logistics and inventory operations. By combining traditional relational databases with **RAG (Retrieval-Augmented Generation)**, the system allows managers to interact with warehouse data using natural language.
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/samitugal/WarehouseManagerAI.git
-   cd warehouse-management-chatbot
-   ```
+> **Research Focus:** Bridging the gap between structured inventory data (SQL) and unstructured logistics documentation through AI Agents.
 
-2. **Set up the Python environment:**
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate   # On Windows use `venv\Scripts\activate`
-   ```
+---
 
-3. **Install the required packages:**
-   ```bash
-   pip install -r requirements.txt
-   ```
+## ✨ Key Features
 
-4. **Set up PostgreSQL using Docker:**
-   - Ensure Docker is installed and running on your system.
-   - Use the provided `docker-compose.yaml` file to set up the PostgreSQL database with a sample Northwind database.
-   - Run the following command to start the services:
-     ```bash
-     docker-compose up -d
-     ```
-   - The database connection settings in the project configuration file should be updated to match those specified in the `docker-compose.yaml` file.
+- 🤖 **AI-Driven Querying:** Ask complex questions like *"Which items are nearing expiration and should be prioritized for shipping?"*
+- 🔍 **Hybrid Search Engine:** Combines **PostgreSQL** (structured data) and **Pinecone** (semantic search) for 100% information coverage.
+- 📈 **Predictive Insights:** Automated reporting on stock movements and potential supply chain bottlenecks.
+- 💬 **Multi-turn AI Agent:** A Langchain-powered agent that maintains context for sophisticated warehouse reasoning.
+- 🐳 **Docker-Ready:** Scalable architecture designed for environment consistency and seamless deployment.
 
-5. **Set up Pinecone:**
-   - Sign up for Pinecone and obtain the API key.
-   - Update the Pinecone API settings in the project configuration file.
+---
 
-## Usage
+## 🛠 Tech Stack
 
-1. **Run the Streamlit application:**
-   ```bash
-   streamlit run ui/streamlit_ui.py
-   ```
+| Component | Technology |
+| :--- | :--- |
+| **LLM Orchestration** | LangChain & OpenAI GPT-4 |
+| **Vector Database** | Pinecone (High-dimensional embedding search) |
+| **Relational Database** | PostgreSQL |
+| **UI Framework** | Streamlit Dashboard |
+| **Infrastructure** | Docker & Docker Compose |
 
-2. **Interacting with the ChatBot:**
-   - Open the Streamlit application in your browser.
-   - Use the ChatBot interface to query the warehouse management system.
-   - The ChatBot will respond based on the combined power of OpenAI and Amazon LLM models, querying the PostgreSQL database and Pinecone embeddings as needed.
+---
 
-## Project Structure
+## 📂 Project Structure
 
-- `ui/streamlit_ui.py`: The main Streamlit application file.
-- `requirements.txt`: List of required Python packages.
-- `configs/`: Directory for configuration definitions.
-   - `Database/`: Directory for database configration definitons.
-   - `Embeddings/`: Directory for embeddings configration definitons.
-   - `LLM/`: Directory for large language model configration definitons.
-- `data/`: Directory for data-related files.
-- `src/`: Source code directory.
-  - `agents/`: Agents used for querying data.
-  - `database/`: Database-related modules.
-  - `embedding_providers/`: Modules for embedding operations.
-  - `llm/`: Large Language Model-related modules.
-  - `prompts/`: Directory for prompt templates.
-  - `tools/`: Tools used by the agents.
-  - `utils/`: Utility functions and modules.
-  - `ui/`: Streamlit UI components.
+```bash
+├── configs/              # LLM prompts, DB connections, and API settings
+├── data/                 # Sample datasets (Northwind/Custom Warehouse Data)
+├── src/
+│   ├── agents/           # LangChain agent logic and tool definitions
+│   ├── database/         # SQL schemas and PostgreSQL connectors
+│   └── embedding/        # Logic for document chunking and VectorDB upserts
+├── ui/                   # Streamlit dashboard and Chatbot interface
+└── docker-compose.yml    # Infrastructure orchestration
+```
 
-## Contributing
+## 🚀 Quick Start
+1️⃣ Environment Configuration
+Bash
+```bash
+git clone [https://github.com/giakhanhhii/AI-Driven-Warehouse-Management-System.git](https://github.com/giakhanhhii/AI-Driven-Warehouse-Management-System.git)
 
-We welcome contributions to improve the project. Please follow these steps to contribute:
+cd AI-Driven-Warehouse-Management-System
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/your-feature`).
-3. Make your changes.
-4. Commit your changes (`git commit -m 'Add some feature'`).
-5. Push to the branch (`git push origin feature/your-feature`).
-6. Open a pull request.
+python -m venv venv
 
-## Screenshots
+source venv/bin/activate  # Windows: venv\Scripts\activate
 
-![image](https://github.com/user-attachments/assets/4cdf354a-37ad-4bfc-ad74-e1a3150f6559)
+pip install -r requirements.txt
 
-## License
+```
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+2️⃣ Run Application
+```bash
 
-## Acknowledgements
+# Launch database services
 
-- [OpenAI](https://www.openai.com/)
-- [Amazon LLM](https://aws.amazon.com/machine-learning/large-language-models/)
-- [Langchain](https://langchain.com/)
-- [Pinecone](https://www.pinecone.io/)
-- [Streamlit](https://streamlit.io/)
+docker-compose up -d
+
+```
+
+## Start the AI Dashboard
+```bash
+
+streamlit run ui/app.py
+
+```
+
+## 🧠 Methodology
+The system operates on a Dual-Path Retrieval mechanism:
+
+Deterministic Path: AI Agent translates natural language into SQL queries for precise inventory counts.
+
+Semantic Path: Logistics manuals are embedded and retrieved from Pinecone to answer policy-based questions.
+
+The LangChain Agent acts as the central brain, deciding which path to take based on the user's intent.
+
+## 🎓 Academic Background
+This project is part of a research study conducted at Thuongmai University (TMU), Hanoi.
+
+Author: Nguyen Trieu Gia Khanh
+
+Department: Management Information Systems (MIS)
+
+License: MIT License
