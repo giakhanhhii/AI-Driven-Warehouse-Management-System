@@ -1,0 +1,63 @@
+.env.local
+.env.development
+.env.production
+.env.*.local
+
+# Build outputs
+dist/
+build/
+
+# Dependencies
+node_modules/
+jspm_packages/
+
+# Python / Backend
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+.env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local runtime / generated data
+*.db
+*.sqlite
+*.sqlite3
+backend/warehouseai.db
+warehouseai.db
+tmp-chrome-headless/
+exports/
+
+# Docs / thesis / planning artifacts not needed to run app
+DEMO_HANDBOOK.md
+KLTN.md
+THESIS_*.md
+mock_data_plan.md
+plan/
+test plan/
+
+# Diagram / document source artifacts
+*.drawio
+*.mmd
+*.mermaid
+*.puml
+*.pdf
+*.docx
+*.pptx
+
+# Utility scripts not required at runtime
+scripts/
+
+# Editor / local workspace
+.vscode/
+.idea/
