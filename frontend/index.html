@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WarehouseAI</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div>
+          <div class="brand">🏭 WarehouseAI</div>
+          <div class="sub">Hệ thống kho thông minh</div>
+        </div>
+
+        <nav class="nav-list" id="navList">
+          <button class="chat-item nav-item active" data-view="chat">💬 Trợ lý trí tuệ nhân tạo</button>
+          <button class="chat-item nav-item" data-view="inventory">📦 Tồn kho</button>
+          <button class="chat-item nav-item" data-view="gr">📥 Nhập kho</button>
+          <button class="chat-item nav-item" data-view="gi">📤 Xuất kho</button>
+          <button class="chat-item nav-item" data-view="purchase">🛒 Thu mua</button>
+          <button class="chat-item nav-item" data-view="production">🏭 Sản xuất</button>
+          <button class="chat-item nav-item" data-view="suppliers">🏢 Nhà cung cấp</button>
+          <button class="chat-item nav-item" data-view="settings">⚙️ Cài đặt</button>
+        </nav>
+
+        <div class="sidebar-divider"></div>
+        <button class="new-chat" id="newChatBtn">+ Đoạn chat mới</button>
+        <div class="chat-list-title">Đoạn chat</div>
+        <div class="chat-list" id="chatList"></div>
+        <div class="muted" id="threadLabel"></div>
+      </aside>
+
+      <main class="main">
+        <div class="top">
+          <div class="top-title" id="topTitle"><span class="dot"></span>WarehouseAI — Trợ lý Quản lý Kho</div>
+          <button class="dashboard-toggle" id="dashboardToggleBtn">📊 Bảng tổng quan</button>
+        </div>
+        <div class="main-content" id="mainContent"></div>
+      </main>
+
+      <aside class="dashboard-panel" id="dashboardPanel">
+        <div class="dashboard-header">
+          <div>📊 Tổng quan Kho</div>
+          <div class="muted" id="dashboardRefreshHint">↻ tự làm mới theo Cài đặt</div>
+        </div>
+        <div class="kpi-grid" id="kpiGrid"></div>
+        <div class="dashboard-section">
+          <div class="dashboard-section-title">Mười vật tư có mức đáp ứng ROP cao nhất (thanh thể hiện tồn + đặt mua)</div>
+          <div id="inventoryChart"></div>
+        </div>
+        <div class="dashboard-section">
+          <div class="dashboard-section-title">Ma trận phân loại ABC và XYZ</div>
+          <div class="matrix-grid" id="abcMatrix"></div>
+        </div>
+        <div class="dashboard-section">
+          <div class="dashboard-section-title">⚠️ Cảnh báo Tồn kho Thấp</div>
+          <div id="ropAlerts"></div>
+        </div>
+      </aside>
+    </div>
+
+    <div id="matrixCellModal" class="modal-overlay is-hidden" aria-hidden="true">
+      <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="matrixCellModalTitle">
+        <div class="modal-head">
+          <h2 id="matrixCellModalTitle" class="modal-title">Chi tiết ô ma trận</h2>
+          <button type="button" class="modal-close" id="matrixCellModalClose" aria-label="Đóng">×</button>
+        </div>
+        <div id="matrixCellModalPolicy" class="matrix-modal-policy"></div>
+        <div id="matrixCellModalBody" class="matrix-modal-table-wrap"></div>
+      </div>
+    </div>
+
+    <script src="./api.js"></script>
+    <script src="./mock_data.js"></script>
+    <script src="./dashboard.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
