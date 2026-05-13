@@ -9,6 +9,20 @@ This project combines:
 - AI-assisted warehouse Q&A
 - inventory decision support based on `ROP`, `ABC/XYZ`, and demand forecasting
 
+Dashboard:
+<img width="1917" height="876" alt="5  xuatkho" src="https://github.com/user-attachments/assets/31e31d22-5d80-4d1a-8ab6-3e784bfc2fbe" />
+<img width="1917" height="882" alt="6  thu mua" src="https://github.com/user-attachments/assets/74e2094a-715e-4d73-8531-bc11985237be" />
+<img width="1917" height="867" alt="7  san xuat" src="https://github.com/user-attachments/assets/485d9edd-68d6-4301-a2d5-540917982f90" />
+<img width="1917" height="871" alt="8  nha cung cap" src="https://github.com/user-attachments/assets/a95b73ec-d5f8-49d6-87d0-ff1cb7d5d534" />
+<img width="1917" height="872" alt="9  cai dat" src="https://github.com/user-attachments/assets/876290c9-c8a5-4325-b57f-bbc90b7ca62c" />
+<img width="1912" height="867" alt="warehouse AI" src="https://github.com/user-attachments/assets/351dd9da-5986-413b-873c-ad04a62b7352" />
+<img width="1917" height="875" alt="2  chat" src="https://github.com/user-attachments/assets/6b519b7e-4308-4822-b3f0-ce98a48aeda8" />
+<img width="1917" height="867" alt="3  tonkho" src="https://github.com/user-attachments/assets/b89867fe-8b11-4195-b89a-357a23ea0069" />
+<img width="1917" height="871" alt="4  nhap kho" src="https://github.com/user-attachments/assets/8e1ec388-221a-43aa-9d0a-2ddfc231bf54" />
+
+
+
+
 ## Key Features
 
 - Inventory lookup by material name or code
